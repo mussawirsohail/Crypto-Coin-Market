@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background-image: url('/stock.jpg');
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.ParentContainer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+}
+.ChildContainer{
+  height: 160px;
+  width: 20%;
+  /* background-color: aqua; */
+  /* border: 3px solid rgb(255, 255, 255); */
+  margin: 30px;
+  padding: 15px;
+  color: #ededed;
+  font-size: x-large;
+  justify-content: center;
+  text-align: center;
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+}
+.buy{
+  height: 55px;
+  width: 80px;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 5px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: rgb(117, 243, 117);
+}
+.buy:hover{
+  color: #ededed;
+  background-color: green;
+  transition-duration: 200ms;
+}
+.sell{
+  height: 55px;
+  width: 80px;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 5px;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: red;
+}
+.sell:hover{
+  color: #ffffff;
+  background-color: rgb(149, 19, 19);
+  transition-duration: 200ms;
+}
+
+
+.Heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  color: #ededed;
+}
+h1{
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
