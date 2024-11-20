@@ -101,7 +101,7 @@ export default function CoinMarket() {
     const [data, setData] = useState<DataType | null>(null);
 
     useEffect(() => {
-      fetch(`http://api.coinlayer.com/api/live?access_key=${API_KEY}`)
+      fetch(`https://api.coinlayer.com/api/live?access_key=${API_KEY}`)
         .then((response) => response.json())
         .then((jsonConverted) => {
           console.log("JSON Converted Data :", jsonConverted);
@@ -111,70 +111,70 @@ export default function CoinMarket() {
     return (
       <>
       <div className="ParentContainer">
-        <div className="ChildContainer">
-          <p> BNB: ${data?.rates?.BNB} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-        <div className="ChildContainer">
-          <p> DOGE: ${data?.rates?.DOGE} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-        <div className="ChildContainer">
-          <p> ETH: ${data?.rates?.ETH} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-        <div className="ChildContainer">
-          <p> BTC: ${data?.rates?.BTC} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-        <div className="ChildContainer">
-          <p> USDT: ${data?.rates?.USDT} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-        <div className="ChildContainer">
-          <p> XRP: ${data?.rates?.XRP} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-        <div className="ChildContainer">
-          <p> LTC: ${data?.rates?.LTC} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-        <div className="ChildContainer">
-          <p> ADA: ${data?.rates?.ADA} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-        <div className="ChildContainer">
-          <p> SOL: ${data?.rates?.SOL} </p>
-          <div className="buttons"> 
-            <button className="buy">Buy</button>
-            <button className="sell">Sale</button>
-            </div>
-        </div>
-       <div className="ChildContainer">
+      <div className="ChildContainer">
+      <p> BNB: ${data?.rates?.BNB} </p>
+      <div className="buttons"> 
+      <button className="buy">Buy</button>
+      <button className="sell">Sale</button>
+      </div>
+      </div>
+      <div className="ChildContainer">
+      <p> DOGE: ${data?.rates?.DOGE} </p>
+      <div className="buttons"> 
+      <button className="buy">Buy</button>
+      <button className="sell">Sale</button>
+      </div>
+      </div>
+      <div className="ChildContainer">
+      <p> ETH: ${data?.rates?.ETH} </p>
+      <div className="buttons"> 
+      <button className="buy">Buy</button>
+      <button className="sell">Sale</button>
+     </div>
+     </div>
+     <div className="ChildContainer">
+     <p> BTC: ${data?.rates?.BTC} </p>
+     <div className="buttons"> 
+     <button className="buy">Buy</button>
+     <button className="sell">Sale</button>
+     </div>
+     </div>
+     <div className="ChildContainer">
+     <p> USDT: ${data?.rates?.USDT} </p>
+     <div className="buttons"> 
+     <button className="buy">Buy</button> 
+     <button className="sell">Sale</button>
+     </div>
+     </div>
+     <div className="ChildContainer">
+     <p> XRP: ${data?.rates?.XRP} </p>
+     <div className="buttons"> 
+     <button className="buy">Buy</button>
+     <button className="sell">Sale</button>
+      </div>
+      </div>
+      <div className="ChildContainer">
+      <p> LTC: ${data?.rates?.LTC} </p>
+      <div className="buttons"> 
+      <button className="buy">Buy</button>   
+      <button className="sell">Sale</button>
+      </div>
+      </div>
+      <div className="ChildContainer">
+      <p> ADA: ${data?.rates?.ADA} </p>
+      <div className="buttons"> 
+      <button className="buy">Buy</button>
+      <button className="sell">Sale</button>
+      </div>
+      </div>
+      <div className="ChildContainer">
+      <p> SOL: ${data?.rates?.SOL} </p>
+      <div className="buttons">
+      <button className="buy">Buy</button>
+      <button className="sell">Sale</button>
+      </div>
+      </div>
+      <div className="ChildContainer">
       <p>STMX: ${data?.rates?.STMX}</p>
       <div className="buttons">
       <button className="buy">Buy</button>
@@ -228,20 +228,20 @@ export default function CoinMarket() {
       </div>
       </div>
       <div className="ChildContainer">
-  <p>ENJ: ${data?.rates?.ENJ}</p>
-  <div className="buttons">
-    <button className="buy">Buy</button>
-    <button className="sell">Sale</button>
-  </div>
-</div>
+     <p>ENJ: ${data?.rates?.ENJ}</p>
+     <div className="buttons">
+     <button className="buy">Buy</button>
+     <button className="sell">Sale</button>
+     </div>
+     </div>
 
-<div className="ChildContainer">
-  <p>CVC: ${data?.rates?.CVC}</p>
-  <div className="buttons">
-    <button className="buy">Buy</button>
-    <button className="sell">Sale</button>
-  </div>
-</div>
+     <div className="ChildContainer">
+     <p>CVC: ${data?.rates?.CVC}</p>
+     <div className="buttons">
+     <button className="buy">Buy</button>
+     <button className="sell">Sale</button>
+     </div>
+     </div>
 
 <div className="ChildContainer">
   <p>BAND: ${data?.rates?.BAND}</p>
